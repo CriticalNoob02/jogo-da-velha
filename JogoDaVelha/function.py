@@ -1,7 +1,6 @@
+import os
+
 ## Declarando as Variavéis;
-import re
-
-
 li = [
     [" ","X","O"],
     [" ","X","O"],
@@ -22,6 +21,7 @@ i = 0
 
 # Tabela
 def jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i):
+    os.system("cls")
     print(f"    1   2   3  ")
     print(f"A   {li[0][a]} | {li[0][b]} | {li[0][c]}  ")
     print(f"   ---|---|--- ")
@@ -49,7 +49,7 @@ def jogadorX(JogadaX):
             a = 1
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31m Jogada Invalida! Tente novamente.\033[37m")
             erro = 0
             return erro
     elif(JogadaX == "A2"):
@@ -57,7 +57,7 @@ def jogadorX(JogadaX):
             b = 1
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31mJogada Invalida! Tente novamente.\033[37m")
             erro = 0
             return erro
     elif(JogadaX == "A3"):
@@ -65,7 +65,7 @@ def jogadorX(JogadaX):
             c = 1
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31mJogada Invalida! Tente novamente.\033[37m")
             erro = 0
             return erro
     elif(JogadaX == "B1"):
@@ -73,7 +73,7 @@ def jogadorX(JogadaX):
             d = 1
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31mJogada Invalida! Tente novamente.\033[37m")
             erro = 0
             return erro
     elif(JogadaX == "B2"):
@@ -81,7 +81,7 @@ def jogadorX(JogadaX):
             e = 1
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31mJogada Invalida! Tente novamente.\033[37m")
             erro = 0
             return erro
     elif(JogadaX == "B3"):
@@ -89,7 +89,7 @@ def jogadorX(JogadaX):
             f = 1
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31mJogada Invalida! Tente novamente.\033[37m")
             erro = 0
             return erro
     elif(JogadaX == "C1"):
@@ -97,7 +97,7 @@ def jogadorX(JogadaX):
             g = 1
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31mJogada Invalida! Tente novamente.\033[37m")
             erro = 0 
             return erro               
     elif(JogadaX == "C2"):
@@ -105,7 +105,7 @@ def jogadorX(JogadaX):
             h = 1
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31mJogada Invalida! Tente novamente.\033[37m")
             erro = 0
             return erro
     elif(JogadaX == "C3"):
@@ -113,29 +113,29 @@ def jogadorX(JogadaX):
             i = 1
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31mJogada Invalida! Tente novamente.\033[37m")
             erro = 0
             return erro
     else:
-        print("Jogada Invalida! Tente novamente.")
+        print("\n\033[31mJogada Invalida! Tente novamente.\033[37m")
         erro = 0
         return erro
 
     ## Vitória por Coluna;
     if(a == 1 and d == 1 and g == 1 or b == 1 and e == 1 and h == 1 or c == 1 and f == 1 and i == 1):
-        print("Parece que o 'X' ganhou!")
+        print(f"\n\033[34m Parece que o 'X' ganhou!\033[37m")
         erro = 5
         return erro
 
     ## Vitória por Linha;  
     elif(a == 1 and b == 1 and c == 1 or d == 1 and e == 1 and f == 1 or g == 1 and h == 1 and i == 1):
-        print("Parece que o 'X' ganhou!")
+        print(f"\n\033[34m Parece que o 'X' ganhou!\033[37m")
         erro = 5
         return erro
 
     ## Vitória na Diagonal;
     elif(a == 1 and e == 1 and i == 1 or c == 1 and e == 1 and g == 1):
-        print("Parece que o 'X' ganhou!")
+        print(f"\n\033[34m Parece que o 'X' ganhou!\033[37m")
         erro = 5
         return erro
   
@@ -159,7 +159,7 @@ def jogadorO(JogadaO):
             a = 2
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31m Jogada Invalida! Tente novamente.\033[37m")
             erro = 0
             return erro
     elif(JogadaO  == "A2"):
@@ -167,7 +167,7 @@ def jogadorO(JogadaO):
             b = 2
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31m Jogada Invalida! Tente novamente.\033[37m")
             erro = 0
             return erro
     elif(JogadaO  == "A3"):
@@ -175,7 +175,7 @@ def jogadorO(JogadaO):
             c = 2
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31m Jogada Invalida! Tente novamente.\033[37m")
             erro = 0
             return erro
     elif(JogadaO  == "B1"):
@@ -183,7 +183,7 @@ def jogadorO(JogadaO):
             d = 2
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31m Jogada Invalida! Tente novamente.\033[37m")
             erro = 0
             return erro
     elif(JogadaO  == "B2"):
@@ -191,7 +191,7 @@ def jogadorO(JogadaO):
             e = 2
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31m Jogada Invalida! Tente novamente.\033[37m")
             erro = 0
             return erro
     elif(JogadaO  == "B3"):
@@ -199,7 +199,7 @@ def jogadorO(JogadaO):
             f = 2
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31m Jogada Invalida! Tente novamente.\033[37m")
             erro = 0
             return erro
     elif(JogadaO  == "C1"):
@@ -207,7 +207,7 @@ def jogadorO(JogadaO):
             g = 2
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31m Jogada Invalida! Tente novamente.\033[37m")
             erro = 0
             return erro
     elif(JogadaO  == "C2"):
@@ -215,7 +215,7 @@ def jogadorO(JogadaO):
             h = 2
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31m Jogada Invalida! Tente novamente.\033[37m")
             erro = 0
             return erro
     elif(JogadaO  == "C3"):
@@ -223,29 +223,29 @@ def jogadorO(JogadaO):
             i = 2
             jogo(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i)
         else:
-            print("Jogada Invalida! Tente novamente.")
+            print("\n\033[31m Jogada Invalida! Tente novamente.\033[37m")
             erro = 0
             return erro
     else:
-        print("Jogada Invalida! Tente novamente.")
+        print("\n\033[31m Jogada Invalida! Tente novamente.\033[37m")
         erro = 0
         return erro
 
     ## Vitória por Coluna;
     if(a == 2 and d == 2 and g == 2 or b == 2 and e == 2 and h == 2 or c == 2 and f == 2 and i == 2):
-        print(f"Parece que o 'O' ganhou!")
+        print(f"\n\033[33m Parece que o 'O' ganhou!\033[37m")
         erro = 5
         return erro
         
     ## Vitória por Linha;  
     elif(a == 2 and b == 2 and c == 2 or d == 2 and e == 2 and f == 2 or g == 2 and h == 2 and i == 2):
-        print(f"Parece que o 'O' ganhou!")
+        print(f"\n\033[33m Parece que o 'O' ganhou!\033[37m")
         erro = 5
         return erro
 
     ## Vitória na Diagonal;
     elif(a == 2 and e == 2 and i == 2 or c == 2 and e == 2 and g == 2):
-        print(f"Parece que o 'O' ganhou!")       
+        print(f"\n\033[33m Parece que o 'O' ganhou!\033[37m")       
         erro = 5
         return erro
    
