@@ -1,5 +1,5 @@
 ## Importando a Parte Feia dos Codigos;
-from function import jogo, jogadorX, jogadorO
+from function import jogo, jogadorX, jogadorO,Empate
 import os
 os.system("cls")
 
@@ -16,7 +16,6 @@ jogo()
 
 ## Ciclo da Partida:
 while erro != 5:
-
     erro = 0
     while erro == 0:
         erro = 1
@@ -25,8 +24,13 @@ while erro != 5:
         JogadaX = JogadaX.strip().upper()
         erro = jogadorX(JogadaX)
         
-    ## Verifição de vitória;
+    ## Verifição de vitória ou empate;
+    empate = Empate()
     if( erro == 5):
+        print("")
+        print("\033[42m####################\033[32;40m Fim de Jogo! \033[37;42m####################\033[40m")
+        break
+    elif empate == True:
         print("")
         print("\033[42m####################\033[32;40m Fim de Jogo! \033[37;42m####################\033[40m")
         break

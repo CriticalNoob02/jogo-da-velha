@@ -248,4 +248,22 @@ def jogadorO(JogadaO):
         print(f"\n\033[33m Parece que o 'O' ganhou!\033[37m")       
         erro = 5
         return erro
-   
+
+def Empate():
+    global a
+    global b
+    global c
+    global d
+    global e
+    global f
+    global g
+    global h
+    global i
+    empate = False
+
+    if (a!=0 and b!=0 and c!=0 and d!=0 and e!=0 and f!=0 and g!=0 and h!=0 and i!=0):
+        empate = True
+        print(f"\n\033[36m Parece que houve um empate!\033[37m")
+    else:
+        pass
+    return empate
